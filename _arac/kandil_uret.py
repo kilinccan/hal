@@ -124,6 +124,7 @@ def sayfa(body, title, desc):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6837715909">
 <title>{t}</title>
 <meta name="description" content="{d}">
 <link rel="canonical" href="{SAYFA_URL}">

@@ -106,6 +106,7 @@ def sayfa(d, up):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6837715909">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon}">
@@ -162,6 +163,7 @@ def index(duas):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6837715909">
 <title>{esc(title)} | HÂL</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon}">
