@@ -67,12 +67,13 @@ def kare_html(item, label, meal):
 .top{position:absolute;top:70px;left:0;right:0;text-align:center;font-size:38px;line-height:1.2}
 .c{position:absolute;left:100px;right:100px;top:150px;bottom:170px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .ml{font-size:36px;line-height:1.5;margin-top:40px}.src{margin-top:34px;font-size:30px}
-.hal{position:absolute;bottom:64px;left:0;right:0;text-align:center;font-size:44px;letter-spacing:.14em}"""
+.hal{position:absolute;bottom:96px;left:0;right:0;text-align:center;font-size:44px;letter-spacing:.14em}
+.ara{position:absolute;bottom:48px;left:0;right:0;text-align:center;font-size:28px;letter-spacing:.06em;color:#7A6226}"""
     body = (
         "<div class='top altin' lang='tr'>Regaip Kandiliniz mübarek olsun</div>"
         f"<div class='c'><div class='ar' lang='ar' style='font-size:{px}px'>{escape(item['arabic'])}</div>"
         f"<div class='ml'>{escape(meal)}</div><div class='src altin'>{escape(label)}</div></div>"
-        "<div class='hal' lang='tr'>HÂL</div>"
+        "<div class='hal' lang='tr'>HÂL</div><div class='ara' lang='tr'>App Store'da HÂL ara</div>"
     )
     return doc(css, body)
 
@@ -122,6 +123,7 @@ def sayfa(body, title, desc):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{t}</title>
 <meta name="description" content="{d}">
 <link rel="canonical" href="{SAYFA_URL}">

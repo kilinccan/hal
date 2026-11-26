@@ -105,6 +105,7 @@ def sayfa(d, up):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon}">
@@ -160,6 +161,7 @@ def index(duas):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{esc(title)} | HÂL</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon}">
