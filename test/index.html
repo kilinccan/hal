@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bugün hangi ayet sana iyi gelir? 3 soruluk mini test</title>
+<meta name="description" content="Üç kısa soruya cevap ver, bugün sana uygun doğrulanmış bir ayet ya da dua çıksın. Cevapların cihazından çıkmaz.">
+<link rel="canonical" href="https://kilinccan.github.io/hal/test/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HÂL">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Bugün hangi ayet sana iyi gelir?">
+<meta property="og:description" content="Üç kısa soru, sana uygun bir ayet. Cevapların cihazından çıkmaz.">
+<meta property="og:url" content="https://kilinccan.github.io/hal/test/">
+<meta property="og:image" content="https://kilinccan.github.io/hal/test/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kilinccan.github.io/hal/test/og.png">
+<style>
+  :root { --bg: #F8F6F0; --fg: #1F2A25; --muted: #5B6660; --accent: #23483B; --on-accent: #F8F6F0; --line: #E0DCCF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151C19; --fg: #ECE9E1; --muted: #A3ACA7; --accent: #A9C7B8; --on-accent: #151C19; --line: #2B3530; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 28px 16px 48px; }
+  .marka { color: var(--accent); font-weight: 600; letter-spacing: .2em; margin: 0 0 1.2em; }
+  .marka a { color: inherit; text-decoration: none; }
+  h1 { color: var(--accent); font-size: 1.6rem; line-height: 1.25; margin: 0 0 .6em; }
+  h2 { color: var(--accent); font-size: 1.1rem; margin: 1.8em 0 .4em; }
+  p { margin: 0 0 1em; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  .indir, button { display: inline-block; background: var(--accent); color: var(--on-accent); text-decoration: none;
+           font: inherit; font-weight: 600; padding: 14px 26px; border-radius: 14px; margin: 1.2em 0; border: 0; cursor: pointer; }
+  button.ikincil { background: none; color: var(--accent); border: 1px solid var(--line); margin: .4em 0; }
+  .gonder { display: inline-block; font-weight: 600; padding: 12px 4px; }
+  .indir:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible + span { outline: 3px solid var(--fg); outline-offset: 3px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 1.6em; }
+  legend { color: var(--accent); font-weight: 600; font-size: 1.1rem; padding: 0; margin-bottom: .5em; }
+  .secenekler { display: flex; flex-wrap: wrap; gap: 8px; }
+  .secenekler label { display: block; }
+  .secenekler input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .secenekler span { display: inline-block; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+  .secenekler input:checked + span { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  #sonuc:focus { outline: none; }
+  .hata { color: var(--fg); font-weight: 600; }
+  .kare { margin: 0 0 1em; }
+  .kare img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); }
+  ul.konular { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+  ul.konular a { display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; }
+  .kaynak { font-size: .85rem; color: var(--muted); margin-top: 2.2em; border-top: 1px solid var(--line); padding-top: 1em; }
+  footer { font-size: .85rem; color: var(--muted); margin-top: 1.2em; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<p class="marka"><a href="../">HÂL</a></p>
+<h1>Bugün hangi ayet sana iyi gelir?</h1>
+<p class="muted">Üç kısa soru. Cevapların bu sayfada kalır, hiçbir yere gönderilmez.</p>
+
+<form id="test" hidden novalidate>
+  <fieldset>
+    <legend>Bugün içinde en çok ne var?</legend>
+    <div class="secenekler">
+      <label><input type="radio" name="hal" value="yorgunluk"><span>Yorgunluk</span></label>
+      <label><input type="radio" name="hal" value="kaygi"><span>Kaygı</span></label>
+      <label><input type="radio" name="hal" value="kirginlik"><span>Kırgınlık</span></label>
+      <label><input type="radio" name="hal" value="sukur"><span>Şükür</span></label>
+      <label><input type="radio" name="hal" value="ozlem"><span>Özlem, yalnızlık</span></label>
+      <label><input type="radio" name="hal" value="belirsizlik"><span>Belirsizlik</span></label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Şu an neye ihtiyacın var?</legend>
+    <div class="secenekler">
+      <label><input type="radio" name="ihtiyac" value="calm"><span>Huzur</span></label>
+      <label><input type="radio" name="ihtiyac" value="strength"><span>Güç</span></label>
+      <label><input type="radio" name="ihtiyac" value="hope"><span>Umut</span></label>
+      <label><input type="radio" name="ihtiyac" value="forgiveness"><span>Bağışlanma</span></label>
+      <label><input type="radio" name="ihtiyac" value="guidance"><span>Yol gösterme</span></label>
+      <label><input type="radio" name="ihtiyac" value="closeness"><span>Yakınlık</span></label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Nasıl bir şey okumak istersin?</legend>
+    <div class="secenekler">
+      <label><input type="radio" name="tur" value="a"><span>Kısa bir ayet</span></label>
+      <label><input type="radio" name="tur" value="d"><span>Bir dua</span></label>
+    </div>
+  </fieldset>
+  <p id="hata" class="hata" role="alert"></p>
+  <button type="submit">Ayetimi göster</button>
+</form>
+
+<section id="sonuc" hidden aria-live="polite" tabindex="-1">
+  <h2>Bugün sana</h2>
+  <p class="kare"><a id="sonuc-bag" href="#"><img id="sonuc-img" width="1200" height="630" alt=""></a></p>
+  <p><a id="sonuc-sayfa" href="#">Ayetin tamamı ve meali</a></p>
+  <p><a class="gonder" id="paylas" href="#" rel="noopener">WhatsApp'ta paylaş</a></p>
+  <p><button type="button" class="ikincil" id="tekrar">Testi yeniden çöz</button></p>
+  <p><a class="indir" href="https://apps.apple.com/tr/app/id6837715909">HÂL'i App Store'dan indir</a></p>
+</section>
+
+<h2>Konuya göre ayetler ve dualar</h2>
+<ul class="konular"><li><a href="../ayetler/huzur/">Huzur</a></li><li><a href="../ayetler/sabir/">Sabır</a></li><li><a href="../ayetler/umut/">Umut</a></li><li><a href="../ayetler/guc/">Güç</a></li><li><a href="../ayetler/sukur/">Şükür</a></li><li><a href="../ayetler/bagislanma/">Bağışlanma</a></li><li><a href="../ayetler/rehberlik/">Rehberlik</a></li><li><a href="../ayetler/tevekkul/">Tevekkül</a></li><li><a href="../ayetler/teselli/">Teselli</a></li><li><a href="../ayetler/yakinlik/">Yakınlık</a></li><li><a href="../ayetler/dilek-duasi/">Bir dilek duası</a></li></ul>
+<p class="kaynak">Gösterilen ayetler ve dualar kaynağıyla doğrulanmıştır. Bu test bir tavsiye ya da tedavi değildir; HÂL bir tefsir ya da fetva kaynağı değildir, dini hüküm vermez. Amacı, günün içinde kısa bir an durup okumana eşlik etmektir.</p>
+<footer><a href="../gizlilik/">Gizlilik</a> · <a href="../destek/">Destek</a> · <a href="../">HÂL</a></footer>
+</main>
+<script>
+const AYETLER = /*VERI*/[{"p":"2-286","s":"Bakara 2:286","n":["patience","strength","comfort"],"k":"d","u":0},{"p":"94-5-6","s":"İnşirah 94:5-6","n":["hope","comfort","patience"],"k":"a","u":1},{"p":"13-28","s":"Ra'd 13:28","n":["calm","trust","comfort"],"k":"a","u":0},{"p":"2-153","s":"Bakara 2:153","n":["patience","strength"],"k":"a","u":0},{"p":"3-139","s":"Âl-i İmrân 3:139","n":["hope","strength","comfort"],"k":"a","u":1},{"p":"39-53","s":"Zümer 39:53","n":["forgiveness","hope"],"k":"a","u":0},{"p":"14-7","s":"İbrâhîm 14:7","n":["gratitude"],"k":"a","u":0},{"p":"65-3","s":"Talâk 65:3","n":["trust","calm"],"k":"a","u":0},{"p":"2-186","s":"Bakara 2:186","n":["closeness","guidance","comfort"],"k":"a","u":0},{"p":"93-3","s":"Duhâ 93:3","n":["comfort","hope"],"k":"a","u":1},{"p":"2-152","s":"Bakara 2:152","n":["gratitude","closeness"],"k":"a","u":1},{"p":"3-134","s":"Âl-i İmrân 3:134","n":["patience","forgiveness"],"k":"a","u":0},{"p":"1-6","s":"Fâtiha 1:6","n":["guidance"],"k":"a","u":1},{"p":"55-13","s":"Rahmân 55:13","n":["gratitude","closeness"],"k":"a","u":1},{"p":"93-4-5","s":"Duhâ 93:4-5","n":["comfort","hope"],"k":"a","u":1},{"p":"12-86","s":"Yûsuf 12:86","n":["comfort","trust"],"k":"a","u":0},{"p":"12-87","s":"Yûsuf 12:87","n":["hope"],"k":"a","u":0},{"p":"15-56","s":"Hicr 15:56","n":["hope"],"k":"a","u":1},{"p":"50-16","s":"Kâf 50:16","n":["calm","trust"],"k":"a","u":0},{"p":"20-46","s":"Tâhâ 20:46","n":["calm","trust"],"k":"a","u":1},{"p":"25-58","s":"Furkân 25:58","n":["trust"],"k":"a","u":0},{"p":"33-3","s":"Ahzâb 33:3","n":["trust"],"k":"a","u":1},{"p":"16-18","s":"Nahl 16:18","n":["gratitude"],"k":"a","u":1},{"p":"70-5","s":"Meâric 70:5","n":["patience"],"k":"a","u":1},{"p":"7-199","s":"A'râf 7:199","n":["forgiveness","patience"],"k":"a","u":1},{"p":"41-34","s":"Fussilet 41:34","n":["forgiveness"],"k":"a","u":0},{"p":"94-7-8","s":"İnşirah 94:7-8","n":["strength"],"k":"a","u":1},{"p":"57-4","s":"Hadîd 57:4","n":["calm","closeness"],"k":"a","u":0},{"p":"16-53","s":"Nahl 16:53","n":["gratitude"],"k":"a","u":0},{"p":"2-172","s":"Bakara 2:172","n":["gratitude"],"k":"a","u":0},{"p":"17-82","s":"İsrâ 17:82","n":["comfort","calm"],"k":"a","u":0},{"p":"20-2","s":"Tâhâ 20:2","n":["comfort"],"k":"a","u":1},{"p":"65-7","s":"Talâk 65:7","n":["hope","patience"],"k":"a","u":0},{"p":"7-56","s":"A'râf 7:56","n":["hope","closeness"],"k":"a","u":0},{"p":"42-28","s":"Şûrâ 42:28","n":["hope","comfort"],"k":"a","u":0},{"p":"2-214","s":"Bakara 2:214","n":["hope","patience"],"k":"a","u":0},{"p":"2-155-157","s":"Bakara 2:155-157","n":["patience","comfort"],"k":"a","u":0},{"p":"16-127","s":"Nahl 16:127","n":["patience","comfort"],"k":"a","u":0},{"p":"39-10","s":"Zümer 39:10","n":["patience","hope"],"k":"a","u":0},{"p":"3-159","s":"Âl-i İmrân 3:159","n":["forgiveness","trust"],"k":"a","u":0},{"p":"3-173","s":"Âl-i İmrân 3:173","n":["trust","strength"],"k":"a","u":0},{"p":"24-22","s":"Nûr 24:22","n":["forgiveness"],"k":"a","u":0},{"p":"4-110","s":"Nisâ 4:110","n":["forgiveness","hope"],"k":"a","u":0},{"p":"3-160","s":"Âl-i İmrân 3:160","n":["trust","strength"],"k":"a","u":0},{"p":"2-45","s":"Bakara 2:45","n":["patience","strength"],"k":"a","u":0},{"p":"48-4","s":"Fetih 48:4","n":["calm","trust","strength"],"k":"a","u":0},{"p":"31-12","s":"Lokmân 31:12","n":["gratitude"],"k":"a","u":0},{"p":"40-60","s":"Mü’min 40:60","n":["closeness","hope","wish"],"k":"a","u":0},{"p":"42-40","s":"Şûrâ 42:40","n":["forgiveness"],"k":"a","u":0},{"p":"29-69","s":"Ankebût 29:69","n":["guidance","strength","hope"],"k":"a","u":0},{"p":"93-11","s":"Duhâ 93:11","n":["gratitude"],"k":"a","u":1},{"p":"3-200","s":"Âl-i İmrân 3:200","n":["patience","strength"],"k":"a","u":0},{"p":"11-56","s":"Hûd 11:56","n":["trust","strength"],"k":"a","u":0},{"p":"3-135","s":"Âl-i İmrân 3:135","n":["forgiveness","hope"],"k":"a","u":0},{"p":"47-7","s":"Muhammed 47:7","n":["strength","trust"],"k":"a","u":0},{"p":"20-25-26","s":"Tâhâ 20:25-26","n":["calm","comfort","wish"],"k":"d","u":1},{"p":"21-87","s":"Enbiyâ 21:87","n":["forgiveness","hope"],"k":"d","u":0},{"p":"16-114","s":"Nahl 16:114","n":["gratitude"],"k":"a","u":0},{"p":"27-40","s":"Neml 27:40","n":["gratitude"],"k":"a","u":0},{"p":"39-66","s":"Zümer 39:66","n":["gratitude"],"k":"a","u":1},{"p":"16-78","s":"Nahl 16:78","n":["gratitude"],"k":"a","u":0},{"p":"3-8","s":"Âl-i İmrân 3:8","n":["guidance","wish"],"k":"d","u":0},{"p":"18-10","s":"Kehf 18:10","n":["guidance","wish"],"k":"d","u":0},{"p":"6-153","s":"En‘âm 6:153","n":["guidance"],"k":"a","u":0},{"p":"17-9","s":"İsrâ 17:9","n":["guidance"],"k":"a","u":0},{"p":"20-114","s":"Tâhâ 20:114","n":["guidance","wish"],"k":"d","u":0},{"p":"64-11","s":"Teğâbün 64:11","n":["guidance","trust"],"k":"a","u":0},{"p":"4-147","s":"Nisâ 4:147","n":["gratitude"],"k":"a","u":0},{"p":"7-10","s":"A‘râf 7:10","n":["gratitude"],"k":"a","u":0},{"p":"10-62","s":"Yûnus 10:62","n":["calm","trust"],"k":"a","u":1},{"p":"41-30","s":"Fussilet 41:30","n":["calm","comfort"],"k":"a","u":0},{"p":"57-23","s":"Hadîd 57:23","n":["calm","gratitude"],"k":"a","u":0},{"p":"2-156","s":"Bakara 2:156","n":["calm","comfort"],"k":"a","u":0},{"p":"46-13","s":"Ahkāf 46:13","n":["calm","strength"],"k":"a","u":0},{"p":"42-25","s":"Şûrâ 42:25","n":["forgiveness","hope"],"k":"a","u":0},{"p":"25-70","s":"Furkān 25:70","n":["forgiveness","hope"],"k":"a","u":0},{"p":"42-37","s":"Şûrâ 42:37","n":["forgiveness","patience"],"k":"a","u":0},{"p":"8-2","s":"Enfâl 8:2","n":["trust","closeness"],"k":"a","u":0},{"p":"3-122","s":"Âl-i İmrân 3:122","n":["trust","strength"],"k":"a","u":0},{"p":"93-5","s":"Duhâ 93:5","n":["comfort","hope"],"k":"a","u":1},{"p":"3-186","s":"Âl-i İmrân 3:186","n":["patience","strength"],"k":"a","u":0},{"p":"31-17","s":"Lokmân 31:17","n":["patience","strength"],"k":"a","u":0},{"p":"8-46","s":"Enfâl 8:46","n":["strength","patience"],"k":"a","u":0},{"p":"4-28","s":"Nisâ 4:28","n":["strength","comfort"],"k":"a","u":1},{"p":"58-7","s":"Mücâdele 58:7","n":["closeness","comfort"],"k":"a","u":0},{"p":"2-115","s":"Bakara 2:115","n":["closeness","comfort"],"k":"a","u":0},{"p":"2-216","s":"Bakara 2:216","n":["comfort","trust"],"k":"a","u":0},{"p":"10-107","s":"Yûnus 10:107","n":["comfort","trust"],"k":"a","u":0},{"p":"3-146","s":"Âl-i İmrân 3:146","n":["patience","strength"],"k":"a","u":0},{"p":"2-250","s":"Bakara 2:250","n":["patience","strength"],"k":"d","u":0},{"p":"2-201","s":"Bakara 2:201","n":["wish","hope"],"k":"d","u":0},{"p":"14-40","s":"İbrahim 14:40","n":["guidance","wish"],"k":"d","u":1},{"p":"14-41","s":"İbrahim 14:41","n":["forgiveness","wish"],"k":"d","u":1},{"p":"17-24","s":"İsrâ 17:24","n":["gratitude","wish"],"k":"d","u":0},{"p":"7-23","s":"A'râf 7:23","n":["forgiveness","hope"],"k":"d","u":0},{"p":"25-74","s":"Furkân 25:74","n":["wish","comfort"],"k":"d","u":0},{"p":"3-147","s":"Âl-i İmrân 3:147","n":["forgiveness","strength","patience"],"k":"d","u":0},{"p":"59-10","s":"Haşr 59:10","n":["forgiveness","wish"],"k":"d","u":0},{"p":"28-24","s":"Kasas 28:24","n":["trust","hope","wish"],"k":"d","u":0},{"p":"3-193","s":"Âl-i İmrân 3:193","n":["forgiveness","hope"],"k":"d","u":0},{"p":"3-16","s":"Âl-i İmrân 3:16","n":["forgiveness","hope"],"k":"d","u":0},{"p":"7-126","s":"A'râf 7:126","n":["patience","strength"],"k":"d","u":0},{"p":"12-101","s":"Yûsuf 12:101","n":["closeness","trust"],"k":"d","u":0},{"p":"17-80","s":"İsrâ 17:80","n":["guidance","wish"],"k":"d","u":0},{"p":"23-97","s":"Mü’minûn 23:97","n":["calm","trust"],"k":"d","u":1},{"p":"26-83","s":"Şuarâ 26:83","n":["guidance","wish"],"k":"d","u":1},{"p":"27-19","s":"Neml 27:19","n":["gratitude","wish"],"k":"d","u":0},{"p":"66-8","s":"Tahrîm 66:8","n":["forgiveness","hope"],"k":"d","u":0},{"p":"2-269","s":"Bakara 2:269","n":["guidance","hope"],"k":"a","u":0},{"p":"57-28","s":"Hadîd 57:28","n":["guidance","forgiveness"],"k":"a","u":0},{"p":"26-78","s":"Şuarâ 26:78","n":["guidance","trust"],"k":"a","u":1},{"p":"3-101","s":"Âl-i İmrân 3:101","n":["guidance","trust"],"k":"a","u":0},{"p":"2-128","s":"Bakara 2:128","n":["closeness","forgiveness","guidance"],"k":"d","u":0},{"p":"3-194","s":"Âl-i İmrân 3:194","n":["closeness","hope"],"k":"d","u":0},{"p":"11-47","s":"Hûd 11:47","n":["closeness","forgiveness"],"k":"d","u":0},{"p":"14-38","s":"İbrahim 14:38","n":["closeness","trust","comfort"],"k":"d","u":0},{"p":"10-57","s":"Yûnus 10:57","n":["calm","comfort","guidance"],"k":"a","u":0},{"p":"7-205","s":"A'râf 7:205","n":["calm","closeness"],"k":"a","u":0},{"p":"28-73","s":"Kasas 28:73","n":["gratitude","calm"],"k":"a","u":0},{"p":"67-23","s":"Mülk 67:23","n":["gratitude"],"k":"a","u":0},{"p":"16-14","s":"Nahl 16:14","n":["gratitude"],"k":"a","u":0},{"p":"7-151","s":"A'râf 7:151","n":["comfort","forgiveness"],"k":"d","u":0},{"p":"3-53","s":"Âl-i İmrân 3:53","n":["trust","closeness"],"k":"d","u":0},{"p":"40-44","s":"Mü’min 40:44","n":["trust"],"k":"a","u":0}]/*VERI-SON*/;
+const TEST_URL = "https://kilinccan.github.io/hal/test/";
+const HAL_IHTIYAC = {
+  yorgunluk: ["strength", "patience", "calm"],
+  kaygi: ["calm", "trust", "comfort"],
+  kirginlik: ["comfort", "hope", "forgiveness"],
+  sukur: ["gratitude"],
+  ozlem: ["closeness", "comfort"],
+  belirsizlik: ["trust", "guidance", "hope"]
+};
+
+function skor(a, c) {
+  let s = 0;
+  if (a.n.includes(c.ihtiyac)) s += 4;
+  for (const n of HAL_IHTIYAC[c.hal]) if (a.n.includes(n)) s += 2;
+  if (a.k === c.tur) s += 3;
+  if (c.tur === "a" && a.k === "a" && a.u) s += 1;
+  return s;
+}
+
+function sec(c, gun) {
+  const sirali = AYETLER.map(a => ({ a, s: skor(a, c) }))
+    .sort((x, y) => y.s - x.s || (x.a.p < y.a.p ? -1 : 1));
+  const adaylar = sirali.filter(x => x.s >= sirali[0].s - 1).slice(0, 5);
+  return adaylar[gun % adaylar.length].a;
+}
+
+const form = document.getElementById("test");
+const sonuc = document.getElementById("sonuc");
+form.hidden = false;
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const v = new FormData(form);
+  const c = { hal: v.get("hal"), ihtiyac: v.get("ihtiyac"), tur: v.get("tur") };
+  if (!c.hal || !c.ihtiyac || !c.tur) {
+    document.getElementById("hata").textContent = "Üç soruyu da cevaplaman yeter.";
+    return;
+  }
+  document.getElementById("hata").textContent = "";
+  const d = new Date();
+  const gun = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+  const a = sec(c, gun);
+  const sayfa = "../ayet/" + a.p + "/";
+  const img = document.getElementById("sonuc-img");
+  img.src = sayfa + "og.png";
+  img.alt = a.s + ". Ayetin görseli";
+  document.getElementById("sonuc-bag").href = sayfa;
+  const l = document.getElementById("sonuc-sayfa");
+  l.href = sayfa;
+  l.textContent = "Ayetin tamamı ve meali: " + a.s;
+  document.getElementById("paylas").href = "https://wa.me/?text=" +
+    encodeURIComponent("Bugün bana bu ayet iyi geldi. Seninki hangisi?\n" + TEST_URL);
+  form.hidden = true;
+  sonuc.hidden = false;
+  sonuc.focus();
+});
+
+document.getElementById("tekrar").addEventListener("click", () => {
+  form.reset();
+  sonuc.hidden = true;
+  form.hidden = false;
+  form.querySelector("input").focus();
+});
+</script>
+</body>
+</html>
