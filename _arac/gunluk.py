@@ -53,6 +53,7 @@ def sayfa(a, gun):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{escape(baslik)}</title>
 <meta name="description" content="{escape(ozet)}">
 <link rel="canonical" href="{url}">
