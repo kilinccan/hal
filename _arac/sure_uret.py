@@ -37,7 +37,8 @@ NAMES = {
     109: "Kâfirûn", 110: "Nasr", 111: "Tebbet", 112: "İhlâs", 113: "Felak", 114: "Nâs",
 }
 TR = str.maketrans({"â": "a", "Â": "a", "î": "i", "û": "u", "ı": "i", "İ": "i", "ö": "o",
-                    "ü": "u", "ş": "s", "ç": "c", "ğ": "g", "’": "", "‘": "", "'": ""})
+                    "ü": "u", "ş": "s", "ç": "c", "ğ": "g", "Ş": "s", "Ç": "c", "Ö": "o", "Ü": "u",
+                    "Ğ": "g", "’": "", "‘": "", "'": ""})
 
 CSS = """  :root { --bg: #F8F6F0; --fg: #1F2A25; --muted: #5B6660; --accent: #23483B; --on-accent: #F8F6F0; --line: #E0DCCF; }
   @media (prefers-color-scheme: dark) {
