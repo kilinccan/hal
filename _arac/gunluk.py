@@ -263,9 +263,12 @@ def main():
     yaz("gunun-ayeti/index.html", sayfa(a, bugun))
     yaz("gunun-ayeti/kutu/index.html", kutu(a))
     (KOK / "gunun-ayeti").mkdir(parents=True, exist_ok=True)
-    durum_png(a, KOK / "gunun-ayeti" / "durum.png")
     yaz("feed.xml", feed(bugun))
     yaz("sitemap-gunluk.xml", sitemap(bugun))
+    try:  # görsel üretilemezse günün sayfası yine yayınlanır, eski durum.png kalır
+        durum_png(a, KOK / "gunun-ayeti" / "durum.png")
+    except SystemExit as ex:
+        print(f"::warning::{str(ex).splitlines()[0]}")
     print(bugun, a["id"])
 
 
