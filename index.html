@@ -3,42 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HÂL — Hâline uygun bir ayet</title>
-<meta name="description" content="Bugün nasılsın? Hâlini seç; sana uygun bir ayet ya da dua gelsin. Reklamsız, hesap gerekmez, veri toplamaz.">
-<meta property="og:title" content="HÂL — Hâline uygun bir ayet">
-<meta property="og:description" content="Bugün nasılsın? Hâlini seç; sana uygun bir ayet ya da dua gelsin.">
+<title>HÂL: Hâline uygun bir ayet</title>
+<meta name="description" content="HÂL: bugün nasılsın? Hâlini seç, sana uygun bir ayet ya da dua gelsin. Arapçası, okunuşu, meali ve kaynağıyla. Reklamsız, hesap gerekmez.">
+<link rel="canonical" href="https://kilinccan.github.io/hal/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HÂL">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="HÂL: Hâline uygun bir ayet">
+<meta property="og:description" content="HÂL: bugün nasılsın? Hâlini seç, sana uygun bir ayet ya da dua gelsin. Arapçası, okunuşu, meali ve kaynağıyla. Reklamsız, hesap gerekmez.">
+<meta property="og:url" content="https://kilinccan.github.io/hal/">
 <style>
-  :root { --bg: #F8F6F0; --fg: #1F2A25; --muted: #5B6660; --accent: #23483B; --on-accent: #F8F6F0; }
+  :root { --bg: #F8F6F0; --fg: #1F2A25; --muted: #5B6660; --accent: #23483B; --on-accent: #F8F6F0; --line: #E0DCCF; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #151C19; --fg: #ECE9E1; --muted: #A3ACA7; --accent: #A9C7B8; --on-accent: #151C19; }
+    :root { --bg: #151C19; --fg: #ECE9E1; --muted: #A3ACA7; --accent: #A9C7B8; --on-accent: #151C19; --line: #2B3530; }
   }
   body { margin: 0; background: var(--bg); color: var(--fg);
          font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 520px; min-height: 100vh; margin: 0 auto; padding: 0 20px; box-sizing: border-box;
-         display: flex; flex-direction: column; justify-content: center; text-align: center; }
-  .marka { color: var(--accent); font-weight: 600; letter-spacing: .2em; margin: 0; }
-  h1 { font-size: 2.1rem; line-height: 1.2; margin: .4em 0; }
-  p { color: var(--muted); margin: 0 0 1.6em; }
+  main { max-width: 680px; margin: 0 auto; padding: 28px 16px 48px; }
+  .marka { color: var(--accent); font-weight: 600; letter-spacing: .2em; margin: 0 0 1.2em; }
+  .marka a { color: inherit; text-decoration: none; }
+  h1 { color: var(--accent); font-size: 1.6rem; line-height: 1.25; margin: 0 0 .6em; }
+  h2 { color: var(--accent); font-size: 1.1rem; margin: 1.8em 0 .4em; }
+  p { margin: 0 0 1em; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  .arapca { font-size: 1.7rem; line-height: 2.3; margin: .4em 0 1em; }
   .indir { display: inline-block; background: var(--accent); color: var(--on-accent); text-decoration: none;
-           font-weight: 600; padding: 15px 28px; border-radius: 14px; font-size: 1.05rem; }
-  .indir:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
-  ul { list-style: none; padding: 0; margin: 2em 0 0; color: var(--muted); font-size: .95rem; }
-  footer { font-size: .85rem; color: var(--muted); margin-top: 2.5em; }
+           font-weight: 600; padding: 14px 26px; border-radius: 14px; margin: 1.2em 0; }
+  .indir:focus-visible, a:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+  ul.liste { list-style: none; padding: 0; margin: 0; }
+  ul.liste li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ul.konular { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+  ul.konular a { display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; }
+  .kaynak { font-size: .85rem; color: var(--muted); margin-top: 2.2em; border-top: 1px solid var(--line); padding-top: 1em; }
+  footer { font-size: .85rem; color: var(--muted); margin-top: 1.2em; }
   footer a { color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
-<p class="marka">HÂL</p>
-<h1>Bugün nasılsın?</h1>
-<p>Hâlini seç; sana uygun bir ayet ya da dua gelsin. Arapçası, okunuşu, meali ve kaynağıyla.</p>
-<div><a class="indir" href="https://apps.apple.com/tr/app/h%C3%A2l-ayet-dua-ve-kuran-meali/id6837715909">App Store'dan indir</a></div>
-<ul>
-  <li>Günlük ayet ücretsiz</li>
-  <li>Reklamsız · Hesap gerekmez · Veri toplamaz</li>
-  <li>iPhone için</li>
-</ul>
-<footer><a href="gizlilik/">Gizlilik</a> · <a href="destek/">Destek</a></footer>
+<p class="marka"><a href="./">HÂL</a></p>
+<h1>HÂL: Hâline uygun bir ayet</h1>
+<p>HÂL, "Bugün nasılsın?" sorusuna cevap vermeni ve hâline uygun bir ayet ya da Kur'an duasıyla kısa bir an durmanı sağlayan sakin bir iPhone uygulamasıdır. Hâlini seçersin, Arapçasını, okunuşunu ve Türkçe mealini okursun; kaynağı her zaman yanındadır. Reklam yok, hesap gerekmez, veri toplanmaz.</p>
+<p><a class="indir" href="https://apps.apple.com/tr/app/id6837715909">App Store'dan indir</a></p>
+<h2>Konuya göre ayetler ve dualar</h2>
+<ul class="konular"><li><a href="ayetler/huzur/">Huzur</a></li><li><a href="ayetler/sabir/">Sabır</a></li><li><a href="ayetler/umut/">Umut</a></li><li><a href="ayetler/guc/">Güç</a></li><li><a href="ayetler/sukur/">Şükür</a></li><li><a href="ayetler/bagislanma/">Bağışlanma</a></li><li><a href="ayetler/rehberlik/">Rehberlik</a></li><li><a href="ayetler/tevekkul/">Tevekkül</a></li><li><a href="ayetler/teselli/">Teselli</a></li><li><a href="ayetler/yakinlik/">Yakınlık</a></li><li><a href="ayetler/dilek-duasi/">Bir dilek duası</a></li></ul>
+<p class="kaynak">HÂL bir tefsir ya da fetva kaynağı değildir; dini hüküm vermez. Amacı, günün içinde kısa bir an durup okumana eşlik etmektir.</p>
+<footer><a href="./gizlilik/">Gizlilik</a> · <a href="./destek/">Destek</a> · <a href="./">HÂL</a></footer>
 </main>
 </body>
 </html>
