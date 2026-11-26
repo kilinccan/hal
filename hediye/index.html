@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Birine ayet hediye et | HÂL</title>
 <meta name="description" content="Adını yaz, hâlini seç; ona özel bir ayet linki oluşsun ve WhatsApp&#x27;tan gönder. Hiçbir veri kaydedilmez.">
+<meta name="referrer" content="no-referrer">
 <meta name="apple-itunes-app" content="app-id=6837715909">
 <link rel="canonical" href="https://kilinccan.github.io/hal/hediye/">
 <meta property="og:type" content="website">
@@ -137,7 +138,7 @@
   var BASE = "https://kilinccan.github.io/hal/";
   var AD = /^[\p{L}]+(?: [\p{L}]+)*$/u;
   var $ = function (id) { return document.getElementById(id); };
-  var byId = {};
+  var byId = Object.create(null);
   D.ayetler.forEach(function (a) { byId[a.i] = a; });
 
   function temiz(s) {

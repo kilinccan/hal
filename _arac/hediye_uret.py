@@ -61,7 +61,7 @@ JS = r"""
   var BASE = "__BASE__";
   var AD = /^[\p{L}]+(?: [\p{L}]+)*$/u;
   var $ = function (id) { return document.getElementById(id); };
-  var byId = {};
+  var byId = Object.create(null);
   D.ayetler.forEach(function (a) { byId[a.i] = a; });
 
   function temiz(s) {
@@ -184,6 +184,7 @@ def sayfa(v):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{baslik}</title>
 <meta name="description" content="{escape(ozet)}">
+<meta name="referrer" content="no-referrer">
 <meta name="apple-itunes-app" content="app-id=6837715909">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
